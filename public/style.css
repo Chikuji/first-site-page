@@ -1,0 +1,155 @@
+/*Cascading Style Sheet ALINHAMENTO ESPAÇAMENTO LARGURA ALTURA*/
+*{
+    box-sizing: border-box; /*manter alinhado os box com o botão*/
+}
+html,body{
+    margin: 0;
+}
+h1, h2{
+    color: #000000dd;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    /*FONTES*/
+    font-family: 'Roboto', sans-serif;
+    background-color: #F9F9F9;
+}
+/*TITULOS*/
+header h1, main h2 {
+    margin-bottom: 70px;
+}
+main h2 span{
+color: #ff4f4f;
+}
+.form h2{
+    text-align: right;
+    color: #ffffffaa;
+    font-size: 20px;
+    /*margin-right: 50px; OU no grid section form*/
+}
+/*ESTRUTURAS*/
+header,main,footer {
+    text-align: center;
+}
+header, .form, main{
+    /*espaço com margem de 70 pc*/
+    margin: 0 auto 70px auto; /*Zero de margem e cima, 
+    automatico na direita, 70px em baixo e 
+    automatico na esquerda*/
+    /*margin-bottom: 70px;*/
+    /*limite dos elementos da pagina*/
+    width: 90%;
+    max-width: 500px;
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+}
+/*HEADER*/
+header button{
+    margin-top: 16px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: #ff4f4f;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+.logo{
+    width: 120px;
+    margin-top: 20px;
+}
+header p {
+    font-size: 14px;
+}
+main .donors{
+    display: grid ;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+/*FORMULARIO*/
+section.form{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*duas colunas*/
+    grid-gap: 45px;
+
+    align-items: center;
+
+    background-color: #ff4f4f;
+    padding: 16px 20px;
+
+    border: 1px solid red;
+    border-radius: 6px;
+}
+form input,form button{
+width: 100%;/*largura*/
+padding: 8px 16px; /*preenchimento do elemento*/
+margin-bottom: 4px;/*margem em baixo do box*/
+border-radius: 4px;/*raio das bordas*/
+border: 1px #ffffff88 solid; /*propriedades da linha do box*/
+
+/*short hands, aplica tudo com um comando
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+border-bottom-left-radius: 4px;
+border-bottom-right-radius: 4px;
+padding-top: 8px;
+padding-right: 16px;
+padding-left: 16px;*/
+}
+form input{
+    background-color: transparent;
+}
+ form input::placeholder{
+     color:#ffffffaa;
+}
+form button{
+    font-weight: bold;
+}
+.blood{
+    color: #ff4f4f;
+    font-weight: bold;
+    font-size: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+.blood::before{
+    content: "";
+    background-color: #ff4f4f11;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+
+    /*FAZENDO UMA GOTA*/
+    border-radius: 50%;
+    border-top-right-radius: 0;
+    transform: rotate(-45deg);
+}
+
+.donor p {
+    margin-top: 24px;
+    margin-bottom: 64px; /*1:08*/
+    font-size: 14px;
+}
+
+footer{
+    margin-top: auto; 
+    padding: 16px ;
+    border: 1px solid #eee;
+}
+
+/*FUNCIONALIDADES COM .JS*/
+
+section.form{
+    transition: all 600ms;
+}
+section.form.hide{
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    margin-top: -70px;
+
+}

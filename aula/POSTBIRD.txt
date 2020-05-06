@@ -1,0 +1,28 @@
+Criar database
+1:17
+struture
+
+Criando uma tabela de doners
+Criando coluna 1:18min
+
+nome 
+email
+blood
+
+Content / Criando um dado no baco
+
+Add New Row 
+
+Query 1:20
+
+-- inserir dados no banco
+insert into "donors" ("name", "email", "blood")
+values ('Robson Marques', 'robson@rock', 'A+');
+
+-- buscar os dados
+select *
+from "donors";
+
+
+
+
